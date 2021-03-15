@@ -1,5 +1,36 @@
 package br.edu.insper.desagil.aps1;
 
-public class Carrinho {
+import java.util.List;
+import java.util.ArrayList;
 
-}
+public class Carrinho {
+	private List<Pedido> pedidos;
+	
+	public Carrinho() {
+		pedidos = new ArrayList<Pedido>();
+		
+	}
+	
+	public List<Pedido> getPedidos() {
+		return pedidos;
+		
+	}
+		
+	public void adicionaItem(Produto produto) {
+		for(Pedido pedido: pedidos ) {
+			if (pedido.getProduto().getCodigo() == produto.getCodigo()) {
+				pedido.incrementaQuantidade();
+		    } else {
+		    	pedidos.add(new Pedido(produto));
+				
+			}
+		}
+		}
+		
+		
+
+		
+	}
+	
+	
+	
