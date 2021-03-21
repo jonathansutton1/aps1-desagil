@@ -23,7 +23,7 @@ public class Pedido {
 	}
 	
 	public int devolveTotal() {
-		return quantidade*produto.getPreco();
+		return (int) (quantidade*produto.getPreco());
 	}
 
 }

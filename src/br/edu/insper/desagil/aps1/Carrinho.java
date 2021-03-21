@@ -17,13 +17,21 @@ public class Carrinho {
 	}
 		
 	public void adicionaItem(Produto produto) {
+		Pedido selecao = null;
 		for(Pedido pedido: pedidos ) {
 			if (pedido.getProduto().getCodigo() == produto.getCodigo()) {
-				pedido.incrementaQuantidade();
-		    } else {
-		    	pedidos.add(new Pedido(produto));
+				selecao = pedido;
+		    } 
+		
 				
-			}
+			
+		}
+		if (selecao != null) {
+			selecao.incrementaQuantidade();
+		
+	    } else {
+	    	pedidos.add(new Pedido(produto));
+			
 		}
 		}
 		
