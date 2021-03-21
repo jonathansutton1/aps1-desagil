@@ -1,18 +1,18 @@
 package br.edu.insper.desagil.aps1;
 
 public class Produto {
-	private String codigo;
+	private int codigo;
 	private String nome;
-	private int preco;
+	private float preco;
 	
-	public Produto(String codigo, String nome, int preco) {
+	public Produto(int codigo, String nome, float preco) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
 		this.preco = preco;			
 	}
 
-	public String getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
@@ -20,7 +20,7 @@ public class Produto {
 		return nome;
 	}
 
-	public int getPreco() {
+	public float getPreco() {
 		return preco;
 	}
 
